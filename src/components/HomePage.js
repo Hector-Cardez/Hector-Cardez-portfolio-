@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/homePage.css";
 import LogoCardez from "../img/cadezCode-navBar.png";
+
 import About from "./About";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
