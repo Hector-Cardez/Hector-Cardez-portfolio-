@@ -16,13 +16,12 @@ const Contact = () => {
       setRemaining(maxChars - newMessage.length);
     }
   };
-
+  /// form validation to ensure user input is accurate and complete.)
   return (
     <div id="contact" className="contact sectionHP">
       <div className="emptySpace"></div>
       <br />
       <h2>Contact</h2>
-
       <form action="/submit_form" method="post">
         <label htmlFor="firstName">First Name:</label>
         <input type="text" id="firstName" name="firstName" maxlength="4" />

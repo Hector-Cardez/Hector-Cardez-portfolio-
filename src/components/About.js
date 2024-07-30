@@ -12,7 +12,7 @@ const About = () => {
 
       <p>
         I'm passionate about creating clean, efficient, and visually compelling
-        web solutions. I focus on using technology to streamline projects and
+        web solutions. I focus on using technology to streamline projects to
         consistently deliver high-quality code and seamless user experiences.
         I'm committed to continuous learning, keeping up with the latest
         industry trends and technologies. Outside of work, I love surfing,

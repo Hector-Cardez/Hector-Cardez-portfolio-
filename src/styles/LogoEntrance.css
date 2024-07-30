@@ -59,14 +59,16 @@
 
 .inner-text {
   padding-right: 10%;
-  width: 89%;
   opacity: 0;
   transition: opacity 2s ease, transform 2s ease;
 }
 
 .inner-text.appear {
+  width: 95%;
   opacity: 1;
   transform: translateY(0);
+  -webkit-box-reflect: below 100px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 
 @keyframes spin {

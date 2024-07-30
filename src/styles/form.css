@@ -40,6 +40,11 @@
   cursor: pointer;
   border-radius: 5px;
 }
+.contact .error {
+  color: red;
+  font-size: 0.9em;
+  margin: 0;
+}
 
 .contact input[type="submit"]:hover {
   background-color: #0056b3;
