@@ -1,4 +1,5 @@
 .tech-container {
+  color: #777;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

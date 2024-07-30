@@ -11,6 +11,10 @@ const HomePage = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
+    document.title = "CARDEZ Code";
+  }, []);
+
+  useEffect(() => {
     const displayTimer = setTimeout(() => {
       setDisplayHP(true);
     }, 3300);
