@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import "../styles/form.css";
 
@@ -7,6 +7,13 @@ const Contact = () => {
 
   const [message, setMessage] = useState("");
   const [remaining, setRemaining] = useState(maxChars);
+
+  useEffect(() => {
+    // Log the environment variables to ensure they are accessible
+    console.log("Service ID:", process.env.REACT_APP_SERVICE_ID);
+    console.log("Template ID:", process.env.REACT_APP_TEMPLATE_ID);
+    console.log("User ID:", process.env.REACT_APP_USER_ID);
+  }, []);
 
   const handleChange = (event) => {
     const newMessage = event.target.value;
@@ -68,15 +75,15 @@ const Contact = () => {
       <div className="emptySpace"></div>
       <br />
       <h2>Contact</h2>
-      <form onSubmit={sendEmail}>
+      <form onSubmit={sendEmail} method="POST">
         <label htmlFor="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" maxLength="4" />
+        <input type="text" id="firstName" name="firstName" maxLength="40" />
 
         <label htmlFor="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" maxLength="20" />
+        <input type="text" id="lastName" name="lastName" maxLength="40" />
 
         <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" maxLength="30" />
+        <input type="email" id="email" name="email" maxLength="50" />
 
         <label htmlFor="message">Message:</label>
         <textarea
@@ -84,7 +91,7 @@ const Contact = () => {
           name="message"
           value={message}
           onChange={handleChange}
-          placeholder="I’d love to hear from you..."
+          placeholder="I&#39;d love to hear from you..."
           autoFocus
         ></textarea>
         <p className="char-count">
