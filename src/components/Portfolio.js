@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/portfolio.css";
 import ImgPortfolio1 from "../img/project1.png";
 import ImgPortfolio2 from "../img/workshop.png";

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import "../styles/form.css";
 
 const Contact = () => {
@@ -9,41 +10,85 @@ const Contact = () => {
 
   const handleChange = (event) => {
     const newMessage = event.target.value;
-
-    // Ensure length does not exceed maxChars while displaying the characters already wrtiiten.
     if (newMessage.length <= maxChars) {
       setMessage(newMessage);
       setRemaining(maxChars - newMessage.length);
     }
   };
-  /// form validation to ensure user input is accurate and complete.)
+
+  const validateForm = () => {
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+
+    if (!firstName || !lastName || !email || !message) {
+      alert("Please fill out all fields.");
+      return false;
+    }
+
+    return true;
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+
+          // Reset form fields
+          setMessage("");
+          setRemaining(maxChars);
+          e.target.reset(); // Clear the form fields
+        },
+        (error) => {
+          console.error("Error sending email:", error);
+          alert(
+            "Failed to send the message, please try again. Error details: " +
+              error.text
+          );
+        }
+      );
+  };
+
   return (
     <div id="contact" className="contact sectionHP">
       <div className="emptySpace"></div>
       <br />
       <h2>Contact</h2>
-      <form action="/submit_form" method="post">
+      <form onSubmit={sendEmail}>
         <label htmlFor="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" maxlength="4" />
+        <input type="text" id="firstName" name="firstName" maxLength="4" />
 
         <label htmlFor="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" maxlength="20" />
+        <input type="text" id="lastName" name="lastName" maxLength="20" />
 
         <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" maxlength="30" />
+        <input type="email" id="email" name="email" maxLength="30" />
 
         <label htmlFor="message">Message:</label>
-
         <textarea
           id="message"
           name="message"
           value={message}
           onChange={handleChange}
-          placeholder="I&rsquo;d love to hear from you..."
+          placeholder="I’d love to hear from you..."
           autoFocus
         ></textarea>
         <p className="char-count">
-          {remaining} /{maxChars}
+          {remaining} / {maxChars}
         </p>
         <input className="input" type="submit" value="Submit" />
       </form>
