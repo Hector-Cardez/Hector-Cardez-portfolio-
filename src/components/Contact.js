@@ -8,12 +8,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [remaining, setRemaining] = useState(maxChars);
 
-  useEffect(() => {
-    // Log the environment variables to ensure they are accessible
-    console.log("Service ID:", process.env.REACT_APP_SERVICE_ID);
-    console.log("Template ID:", process.env.REACT_APP_TEMPLATE_ID);
-    console.log("User ID:", process.env.REACT_APP_USER_ID);
-  }, []);
+  useEffect(() => {}, []);
 
   const handleChange = (event) => {
     const newMessage = event.target.value;
