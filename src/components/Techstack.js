@@ -66,7 +66,11 @@ const Techstack = () => {
             onMouseEnter={() => handleHover(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <img src={tech.icon} alt={`${tech.name} Icon`} />
+            <img
+              className="img-tech"
+              src={tech.icon}
+              alt={`${tech.name} Icon`}
+            />
             <h3>{tech.name}</h3>
             <p
               className={`tech-description ${

@@ -16,7 +16,7 @@
 
 .navContainer {
   width: 100%;
-  height: 4em;
+  height: 3em;
   position: fixed;
   top: 0;
   right: 0;
@@ -87,7 +87,7 @@ h2 {
   }
 
   .sidebarToggle {
-    font-size: 4em;
+    font-size: 3em;
     display: block;
     position: inherit;
     top: 0px;

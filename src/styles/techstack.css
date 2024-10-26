@@ -6,6 +6,7 @@
 }
 
 .tech-card {
+  height: 17vw;
   flex: 1 10 4em;
   flex-direction: column;
   margin: 0.5em;
@@ -21,23 +22,30 @@
 
 .tech-card h3 {
   font-size: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0px;
 }
 
 .tech-card .tech-description {
-  font-size: 1em;
+  font-size: 14px;
   color: #555;
   display: none;
 }
 
 .tech-card.active {
-  transform: scale(1.05);
+  transform: scale(1.05, 1.2);
   z-index: 10;
+  height: 25vw;
 }
 
 .tech-card.active .tech-description {
   display: block;
 }
+
+.tech-card.active h3 {
+  margin: 0px;
+}
+
+/*///////// max-width: 1300px ///////////// */
 
 @media (max-width: 1300px) {
   .tech-container {
@@ -50,7 +58,12 @@
     margin: 0 auto;
   }
 
+  img {
+    height: 9.5vw;
+  }
+
   .tech-card {
+    height: 19vw;
     flex: 1 1 20%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 20% */
     min-width: 50px; /* minimum width for smaller screens */
     max-width: 300px; /* maximum width for larger screens */
@@ -62,10 +75,116 @@
 
   .tech-card .tech-description {
     font-size: 12px;
+    margin: 0px;
+    padding: 0px;
   }
 
   .tech-card.active {
-    transform: scale(1.5);
+    transform: scale(1.05, 1.3);
+    z-index: 10;
+    height: 19vw;
+  }
+}
+
+/*///////// max-width: 970px ///////////// */
+
+@media (max-width: 970px) {
+  .tech-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 1em; /* Spacing between cards */
+    max-width: 40%;
+    max-width: 1300px; /* Optional: Set a max width for the container */
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  img {
+    height: 12vw;
+    margin: 0px;
+    padding: 0px;
+    align-content: center;
+    align-self: center;
+  }
+
+  .tech-card.active img {
+    height: 9vw;
+  }
+
+  .tech-card {
+    height: 29vw;
+    flex: 1 1 20%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 20% */
+    min-width: 50px; /* minimum width for smaller screens */
+    align-items: center;
+  }
+
+  .tech-card h3 {
+    font-size: 1.5vh;
+  }
+
+  .tech-card .tech-description {
     font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .tech-card.active {
+    transform: scale(1.05, 1.3);
+    z-index: 10;
+    height: 29vw;
+  }
+}
+
+/*///////// max-width: 97-px ///////////// */
+
+@media (max-width: 750px) {
+  .tech-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 1em; /* Spacing between cards */
+    max-width: 40%;
+    max-width: 1300px; /* Optional: Set a max width for the container */
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  img {
+    height: 14vw;
+    margin: 0px;
+    padding: 0px;
+    align-content: center;
+    align-self: center;
+  }
+
+  .tech-card {
+    height: 30vw;
+    flex: 1 1 30%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 20% */
+    min-width: 50px; /* minimum width for smaller screens */
+    align-items: center;
+  }
+
+  .tech-card h3 {
+    font-size: 15px;
+  }
+
+  .tech-card .tech-description {
+    font-size: 7.6px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .tech-card.active h3 {
+    font-size: 11px;
+  }
+  .tech-card.active {
+    transform: scale(1.6, 1.7);
+    z-index: 10;
+    height: 29vw;
+  }
+
+  .tech-card.active img {
+    height: 8vw;
   }
 }
