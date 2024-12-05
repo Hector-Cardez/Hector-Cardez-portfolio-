@@ -37,7 +37,7 @@ const LogoEntrance = () => {
 
   // Inline style to ensure component is hidden
   const wrapperStyle = {
-    display: hidden ? "none" : "flex", // Adjust based on your layout needs
+    display: hidden ? "none" : "flex",
     backgroundColor: "#333",
     width: "100%",
     height: "100vh",

@@ -1,28 +1,44 @@
 import { createGlobalStyle } from "styled-components";
-import animateBg from "../img/BGimg.png";
-import BgSmall from "../img/BGsmall-img.png";
-import BgXSmall from "../img/BG-xs-img.png";
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`html {
+    margin: 0;
+    padding: 0; /* Reset default margins and padding on html */
+    overflow-x: hidden; /* Ensure no horizontal overflow occurs */
+}
+    
+html {
+  scroll-behavior: smooth;
+}
 
 body {
     color: #a9a9a9;
     font-family: "Nunito", sans-serif;
-    width: 100%;
-    overflow-x: hidden;
     margin: 0;
-
-    position: relative; /* Ensure that pseudo-elements are positioned relative to the body */
+    height: 100vh;
+    width: 100%; /* Changed from 100vw to avoid including scrollbar width */
+    background-color: black;
+    position: relative; /* Ensure pseudo-elements are positioned relative to the body */
+    
 }
 
-a{
+.container{
+  height: 100vh;
+    width: 100vw;
+}
+
+a {
     color: #cddc39;
     text-decoration: none;
 }
 a:active {
     color: #ff5722;
-  }
-  
+}
+img{
+    height: 10vh;
+    width: 10vw;
+}
+
+
 body::before {
     content: "";
     position: absolute;
@@ -30,12 +46,15 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(${animateBg});
-    background-repeat: repeat;
-    
+   
     z-index: -1; /* Place the background behind all content */
     animation: animateBg 5s linear infinite;
     filter: hue-rotate(0deg);
+}
+
+.logo{
+  height: 25vh;
+    width: 25vw;
 }
 
 @keyframes animateBg {
@@ -45,23 +64,6 @@ body::before {
     100% {
         filter: hue-rotate(360deg);
     }
-}
-
-@media (max-width: 1300px) {
-    body::before {
-        background: url(${BgSmall});
-        background-repeat: repeat;
-
-    }
-}
-
-@media (max-width: 600px) {
-    body::before {
-        background: url(${BgXSmall});
-        background-repeat: repeat;
-
-    }
-}
-`;
+}`;
 
 export default GlobalStyles;

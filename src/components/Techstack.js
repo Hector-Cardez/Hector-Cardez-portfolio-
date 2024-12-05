@@ -39,6 +39,18 @@ const techs = [
       "Managing data storage with a flexible and efficient NoSQL database.",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
   },
+  {
+    name: "Github",
+    description:
+      "Managing code repositories, collaborating on projects, and maintaining version control efficiently..",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+  },
+  {
+    name: "JSON",
+    description:
+      "Handling structured data for web applications, APIs, and seamless server-client communication.",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg",
+  },
 ];
 
 const Techstack = () => {
@@ -53,7 +65,7 @@ const Techstack = () => {
   };
 
   return (
-    <div id="techstack" className="techstack sectionHP">
+    <div id="techstack" className="sectionHP">
       <div className="emptySpace"></div>
       <br />
 

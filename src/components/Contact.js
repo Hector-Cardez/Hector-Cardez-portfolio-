@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
-import "../styles/form.css";
+import "../styles/contact.css";
+import Linkedin from "../img/linkedin_logo.png";
 
 const Contact = () => {
   const maxChars = 1000; // Set the maximum number of characters
@@ -94,6 +95,21 @@ const Contact = () => {
         </p>
         <input className="input" type="submit" value="Submit" />
       </form>
+      <br />
+
+      <div className="footer-container">
+        <div className="footer">
+          © 2024 Cardez. All rights reserved.
+          <div>Empowering web solutions with a creative edge</div>
+          <a
+            href="https://www.linkedin.com/in/hector-carvajal-hernandez-52a970334/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="logo_footer" src={Linkedin} alt="Logo Linkedin" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
