@@ -53,34 +53,37 @@ const Techstack = () => {
   };
 
   return (
-    <div id="techstack" className="techstack sectionHP">
-      <div className="emptySpace"></div>
-      <br />
+    <div id="techstack" className="content-wrapper wrapper">
+      <div className="background-blur bg-techstack"></div>
 
-      <h2>Techstack</h2>
-      <div className="tech-container">
-        {techs.map((tech, index) => (
-          <div
-            key={index}
-            className={`tech-card ${activeTech === index ? "active" : ""}`}
-            onMouseEnter={() => handleHover(index)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <img
-              className="img-tech"
-              src={tech.icon}
-              alt={`${tech.name} Icon`}
-            />
-            <h3>{tech.name}</h3>
-            <p
-              className={`tech-description ${
-                activeTech === index ? "show" : ""
-              }`}
+      <div className="wrapper-inner">
+        <h2 className="section-header">Techstack</h2>
+        <div className="tech-container">
+          {techs.map((tech, index) => (
+            <div
+              key={index}
+              className={`tech-card ${activeTech === index ? "active" : ""}`}
+              onMouseEnter={() => handleHover(index)}
+              onMouseLeave={handleMouseLeave}
             >
-              {tech.description}
-            </p>
-          </div>
-        ))}
+              <div className="tech-card-wrapper">
+                <img
+                  className="img-tech"
+                  src={tech.icon}
+                  alt={`${tech.name} Icon`}
+                />
+                <h3>{tech.name}</h3>
+                <p
+                  className={`tech-description ${
+                    activeTech === index ? "show" : ""
+                  }`}
+                >
+                  {tech.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
