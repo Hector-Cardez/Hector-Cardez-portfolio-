@@ -75,6 +75,44 @@ const HomePage = () => {
   }, [activeSection]); // Trigger on activeSection change
 
   useEffect(() => {
+    let startY = 0;
+
+    const handleTouchStart = (e) => {
+      startY = e.touches[0].clientY; // Record the starting Y position
+    };
+
+    const handleTouchMove = (e) => {
+      if (isScrolling.current) {
+        e.preventDefault();
+        return;
+      }
+
+      const endY = e.touches[0].clientY;
+      const direction = endY < startY ? 1 : -1; // Scroll down or up
+      const nextIndex = activeSection + direction;
+
+      if (nextIndex >= 0 && nextIndex < sectionsRef.current.length) {
+        isScrolling.current = true;
+
+        setActiveSection(nextIndex); // Update active section index
+        scrollToSection(nextIndex);
+
+        setTimeout(() => {
+          isScrolling.current = false;
+        }, 1000); // Lock scrolling for X period of time
+      }
+    };
+
+    window.addEventListener("touchstart", handleTouchStart, { passive: false });
+    window.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+    return () => {
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, [activeSection]); // Dependency on activeSection
+
+  useEffect(() => {
     document.title = "CARDEZ Code";
   }, []);
 
