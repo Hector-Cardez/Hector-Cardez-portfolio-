@@ -138,35 +138,50 @@ const HomePage = () => {
           <a
             className="navLink"
             href="#services"
-            onClick={() => setActiveSection(0)}
+            onClick={() => {
+              setActiveSection(0);
+              closeNav();
+            }}
           >
             Services
           </a>
           <a
             className="navLink"
             href="#about"
-            onClick={() => setActiveSection(1)}
+            onClick={() => {
+              setActiveSection(1);
+              closeNav();
+            }}
           >
             About
           </a>
           <a
             className="navLink"
             href="#portfolio"
-            onClick={() => setActiveSection(2)}
+            onClick={() => {
+              setActiveSection(2);
+              closeNav();
+            }}
           >
             Portfolio
           </a>
           <a
             className="navLink"
             href="#techstack"
-            onClick={() => setActiveSection(3)}
+            onClick={() => {
+              setActiveSection(3);
+              closeNav();
+            }}
           >
             Techstack
           </a>
           <a
             className="navLink"
             href="#contact"
-            onClick={() => setActiveSection(4)}
+            onClick={() => {
+              setActiveSection(4);
+              closeNav();
+            }}
           >
             Contact
           </a>
