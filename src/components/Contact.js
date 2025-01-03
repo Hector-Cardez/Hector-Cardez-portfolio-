@@ -77,7 +77,7 @@ const Style = styled.div`
   }
 
   @media (max-height: 815px) {
-    transform: scale(1, 0.9);
+    transform: scale(1, 1);
     font-size: 1rem;
     position: relative;
     font-weight: 400;
@@ -85,14 +85,14 @@ const Style = styled.div`
   }
 
   @media (max-height: 715px) {
-    transform: scale(1, 0.8);
+    transform: scale(1, 1);
     font-size: 0.9rem;
     position: relative;
-    top: -80px;
+    top: -35px;
   }
 
   @media (max-height: 650px) {
-    transform: scale(1, 0.75);
+    transform: scale(1, 0.8);
     font-size: 0.8rem;
     position: relative;
     top: -80px;
@@ -113,13 +113,7 @@ const Style = styled.div`
     }
   }
 
-  @media (max-width: 400px) {
-    transform: scale(1, 0.8);
-    font-size: 0.8.5rem;
-    position: relative;
-    top: -80px;
-  }
-  @media (max-height: 400px) {
+  @media (max-height: 389px) {
     transform: scale(1, 0.6);
     font-size: 0.8.5rem;
     position: relative;
