@@ -81,7 +81,7 @@ const Style = styled.div`
     font-size: 1rem;
     position: relative;
     font-weight: 400;
-    top: -55px;
+    top: -30px;
   }
 
   @media (max-height: 715px) {
