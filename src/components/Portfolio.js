@@ -3,13 +3,20 @@ import styled from "styled-components";
 import ImgPortfolio1 from "../img/project1.png";
 import ImgPortfolio2 from "../img/workshop.png";
 import ImgPortfolio3 from "../img/mockup.png";
+import ImgPortfolio4 from "../img/cineScore.png";
 
 const Style = styled.div`
+  .portfolioItem img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+  }
+
   @media (max-height: 750px) {
     position: relative;
     top: -20px;
     display: flex;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   @media (max-width: 700px) {
@@ -52,6 +59,16 @@ const Portfolio = () => {
             <p>
               Mockup Page( Concordia Bootcamp) ...
               <a href="https://zjx5x8.csb.app/">Click here to visit</a>
+            </p>
+          </div>
+
+          <div className="portfolioItem">
+            <img src={ImgPortfolio4} alt="cineScore" />
+            <p>
+              CineScore(Your guide to great movies) ...
+              <a href="https://cine-score-iota.vercel.app/all">
+                Click here to visit
+              </a>
             </p>
           </div>
           <div className="portfolioItem">
