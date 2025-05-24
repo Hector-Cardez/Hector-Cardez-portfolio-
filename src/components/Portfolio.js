@@ -52,7 +52,13 @@ const Portfolio = () => {
           </div>
           <div className="portfolioItem">
             <img src={ImgPortfolio2} alt="workshop" />
-            <p> Workshop tic-tac-toe( Concordia Bootcamp) ... link to come </p>
+            <p>
+              {" "}
+              Workshop tic-tac-toe( Concordia Bootcamp)
+              <a href="https://vercel.com/hector-cardezs-projects/project-js-nyan-cat">
+                Click here to visit
+              </a>
+            </p>
           </div>
           <div className="portfolioItem">
             <img src={ImgPortfolio3} alt="workshop" />
