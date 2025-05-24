@@ -48,17 +48,17 @@ const Portfolio = () => {
         <Style>
           <div className="portfolioItem">
             <img src={ImgPortfolio1} alt="Project 1" />
-            <p> Project 1( Concordia Bootcamp) ... link to come </p>
+            <p>
+              {" "}
+              Project 1( Concordia Bootcamp){" "}
+              <a href="https://project-js-nyan-cat-ashen.vercel.app/">
+                Click here to visit
+              </a>{" "}
+            </p>
           </div>
           <div className="portfolioItem">
             <img src={ImgPortfolio2} alt="workshop" />
-            <p>
-              {" "}
-              Workshop tic-tac-toe( Concordia Bootcamp)
-              <a href="https://vercel.com/hector-cardezs-projects/project-js-nyan-cat">
-                Click here to visit
-              </a>
-            </p>
+            <p> Workshop tic-tac-toe( Concordia Bootcamp) ... link to come </p>
           </div>
           <div className="portfolioItem">
             <img src={ImgPortfolio3} alt="workshop" />
