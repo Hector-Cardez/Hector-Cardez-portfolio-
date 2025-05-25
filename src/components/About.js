@@ -69,7 +69,6 @@ const Style = styled.div`
     top: -75px;
   }
 `;
-
 const About = () => {
   return (
     <div id="about" className="content-wrapper">
@@ -87,28 +86,30 @@ const About = () => {
             className="profilePic"
           />
           <Text>
-            Hi, I’m Hector Carvajal Hernandez, the founder of CARDEZ. I
-            specialize in creating clean, efficient, and visually captivating
-            web and software solutions tailored to meet your business needs.
+            Hi, I’m Hector Carvajal Hernandez, a web developer with a strong
+            interest in creating clean and reliable web applications. I go by
+            CARDEZ, a name based on my last name that I use to represent my work
+            as a developer.
           </Text>
           <Text>
-            Whether it’s a dynamic website, a custom software tool, or an
-            e-commerce platform, my goal is to help you stand out and succeed in
-            today’s digital world.
+            My journey started at Langara College in Vancouver, where I studied
+            web development and learned the core principles of HTML, CSS, and
+            responsive design. Later, I completed a full-stack web development
+            bootcamp at Concordia University in Montreal, where I expanded my
+            skills in JavaScript, React, Node.js, and databases.
           </Text>
           <Text>
-            At CARDEZ, I focus on delivering user-friendly and high-performing
-            solutions by staying ahead of the latest technologies and industry
-            trends. I combine technical expertise with a passion for
-            understanding your unique goals, ensuring every project not only
-            looks great but also delivers results.
+            I enjoy building user-friendly projects that focus on performance
+            and clarity. Whether it’s for business tools or personal projects, I
+            care about writing solid, maintainable code and solving real-world
+            problems through development.
           </Text>
           <Text>
-            Outside of development, I draw creativity from exploring new
-            destinations, and even experimenting with culinary adventures. These
-            experiences inspire fresh ideas that I bring to my work. Let’s
-            collaborate to bring your vision to life and take your business to
-            the next level!
+            Outside of coding, I draw inspiration from traveling and trying new
+            food—these experiences help me see things from new angles and bring
+            fresh ideas into my work. I'm now looking to grow as a developer and
+            contribute to a team that values learning, quality, and
+            collaboration.
           </Text>
         </Style>
       </div>
