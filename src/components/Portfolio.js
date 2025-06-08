@@ -4,7 +4,7 @@ import ImgPortfolio1 from "../img/project1.png";
 import ImgPortfolio2 from "../img/workshop.png";
 import ImgPortfolio3 from "../img/mockup.png";
 import ImgPortfolio4 from "../img/cineScore.png";
-import ImgPortfolio5 from "../img/portfolio.png";
+import ImgPortfolio5 from "../img/e-commerce.png";
 
 const Style = styled.div`
   .portfolioItem img {
