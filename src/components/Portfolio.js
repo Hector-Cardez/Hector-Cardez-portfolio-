@@ -4,6 +4,7 @@ import ImgPortfolio1 from "../img/project1.png";
 import ImgPortfolio2 from "../img/workshop.png";
 import ImgPortfolio3 from "../img/mockup.png";
 import ImgPortfolio4 from "../img/cineScore.png";
+import ImgPortfolio5 from "../img/portfolio.png";
 
 const Style = styled.div`
   .portfolioItem img {
@@ -73,6 +74,15 @@ const Portfolio = () => {
             <p>
               CineScore(Your guide to great movies) ...
               <a href="https://cine-score-iota.vercel.app/all">
+                Click here to visit
+              </a>
+            </p>
+          </div>
+          <div className="portfolioItem">
+            <img src={ImgPortfolio5} alt="e-commerce" />
+            <p>
+              E-commerce project(YConcordia Bootcamp) ...
+              <a href="https://e-commerce-yqz5.vercel.app/">
                 Click here to visit
               </a>
             </p>
