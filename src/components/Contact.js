@@ -213,7 +213,7 @@ const Contact = () => {
           </form>
           <div className="footer-container">
             <div className="footer">
-              © 2024 Cardez. All rights reserved.
+              © Cardez. All rights reserved.
               <div>Empowering web solutions with a creative edge</div>
               <a
                 href="https://www.linkedin.com/in/hector-carvajal-hernandez-52a970334/"
