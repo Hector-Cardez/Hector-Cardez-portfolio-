@@ -24,7 +24,7 @@ const Text = styled.p`
 
 const Style = styled.div`
   @media (max-height: 750px) {
-    transform: scale(0.9, 0.9);
+    transform: scale(0.8, 0.8);
     font-size: 15px;
     font-weight: 400;
     position: relative;
@@ -47,7 +47,7 @@ const Style = styled.div`
   }
 
   @media (max-height: 500px) {
-    transform: scale(0.9, 0.9);
+    transform: scale(0.87, 0.87);
     font-size: 14px;
     font-weight: 600;
     position: relative;
@@ -62,7 +62,7 @@ const Style = styled.div`
     top: -40px;
   }
   @media (max-height: 380px) {
-    transform: scale(1, 0.65);
+    transform: scale(0.9, 0.65);
     font-size: 0.83rem;
     font-weight: 400;
     position: relative;

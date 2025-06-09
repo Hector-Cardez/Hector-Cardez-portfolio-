@@ -14,6 +14,7 @@ const Style = styled.div`
   }
 
   @media (max-height: 750px) {
+    transform: scale(0.9, 0.9);
     position: relative;
     top: -20px;
     display: flex;
@@ -30,6 +31,7 @@ const Style = styled.div`
     justify-content: center;
   }
   @media (max-height: 390px) {
+    transform: scale(0.8, 0.8);
     position: relative;
     top: -20px;
     display: flex;
