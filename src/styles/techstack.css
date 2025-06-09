@@ -244,7 +244,7 @@
   }
 
   .tech-card.active {
-    transform: scale(1.05, 1.1);
+    transform: scale(1.07, 1.2);
     z-index: 10;
     height: 10rem;
   }
@@ -262,7 +262,7 @@
     top: -30px;
   }
   .tech-card.active .tech-description {
-    font-size: 14px;
+    font-size: 0.8rem;
     position: relative;
     top: -20px;
   }

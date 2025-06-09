@@ -9,6 +9,7 @@ const StyledImage = styled.img`
   border-radius: 50%;
   float: left;
   margin: 1.5rem;
+  padding: 10px;
   shape-outside: circle();
   clip-path: circle();
   object-fit: cover;
